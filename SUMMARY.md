@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* Introduction
 * [介绍](介绍.md)
 * [Hello World](hello_world.md)
 * [菜单和工具栏](菜单和工具栏.md)
