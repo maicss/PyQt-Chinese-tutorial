@@ -301,12 +301,84 @@ qbtn = QPushButton('Quit', self)
 ```
 qbtn.clicked.connect(QCoreApplication.instance().quit)
 ```
-事件传递系统在PyQt5内建的single和slot机制里面。点击按钮之后，信号会被捕捉并给出既定的反应。QCoreApplication包含了事件的主循环，它能添加和删除所有的事件，instance()创建了一个它的实例。QCoreApplication是在QApplication里创建的。 点击事件和能终止进程并退出应用的quit函数绑定在了一起。The communication is done between two objects: the sender and the receiver. 在发送者和接受者之间建立了通讯，发送者就是按钮，接受者就是应用对象
+事件传递系统在PyQt5内建的single和slot机制里面。点击按钮之后，信号会被捕捉并给出既定的反应。QCoreApplication包含了事件的主循环，它能添加和删除所有的事件，instance()创建了一个它的实例。QCoreApplication是在QApplication里创建的。 点击事件和能终止进程并退出应用的quit函数绑定在了一起。在发送者和接受者之间建立了通讯，发送者就是按钮，接受者就是应用对象。
 
 程序预览：
 
 ![quitbutton](./images/1-quitbutton.png)
 
 ## 例5，消息盒子
+
+默认情况下，我们点击标题栏的×按钮，QWidget就会关闭。但是有时候，我们修改默认行为。比如，如果我们打开的是一个文本编辑器，并且做了一些修改，我们就会想在关闭按钮的时候让用户进一步确认操作。
+```
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+"""
+ZetCode PyQt5 tutorial 
+
+This program shows a confirmation 
+message box when we click on the close
+button of the application window. 
+
+author: Jan Bodnar
+website: zetcode.com 
+last edited: January 2015
+"""
+
+import sys
+from PyQt5.QtWidgets import QWidget, QMessageBox, QApplication
+
+
+class Example(QWidget):
+    
+    def __init__(self):
+        super().__init__()
+        
+        self.initUI()
+        
+        
+    def initUI(self):               
+        
+        self.setGeometry(300, 300, 250, 150)        
+        self.setWindowTitle('Message box')    
+        self.show()
+        
+        
+    def closeEvent(self, event):
+        
+        reply = QMessageBox.question(self, 'Message',
+            "Are you sure to quit?", QMessageBox.Yes | 
+            QMessageBox.No, QMessageBox.No)
+
+        if reply == QMessageBox.Yes:
+            event.accept()
+        else:
+            event.ignore()        
+        
+        
+if __name__ == '__main__':
+    
+    app = QApplication(sys.argv)
+    ex = Example()
+    sys.exit(app.exec_())
+```
+如果关闭QWidget，就会产生一个QCloseEvent。改变空间的默认行为，就是替换掉默认的事件处理。
+```
+reply = QMessageBox.question(self, 'Message',
+    "Are you sure to quit?", QMessageBox.Yes | 
+    QMessageBox.No, QMessageBox.No)
+```
+创建了一个有俩按钮的消息We show a message box with two buttons: Yes and No. The first string appears on the titlebar. The second string is the message text displayed by the dialog. The third argument specifies the combination of buttons appearing in the dialog. The last parameter is the default button. It is the button which has initially the keyboard focus. The return value is stored in the reply variable.
+
+if reply == QtGui.QMessageBox.Yes:
+    event.accept()
+else:
+    event.ignore()  
+Here we test the return value. If we click the Yes button, we accept the event which leads to the closure of the widget and to the termination of the application. Otherwise we ignore the close event.
+
+程序预览：
+
+![messagebox](./images/1-messagebox.png)
 
 ## 例6，窗口居中
