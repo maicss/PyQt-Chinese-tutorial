@@ -137,16 +137,105 @@ class Example(QWidget):
 ```
 self.initUI() 
 ```
-The creation of the GUI is delegated to the initUI() method.
-
+使用`initUI()`方法创建一个GUI。
+```
+# 自己准备一个web.png
 self.setGeometry(300, 300, 300, 220)
 self.setWindowTitle('Icon')
 self.setWindowIcon(QIcon('web.png'))  
-All three methods have been inherited from the QWidget class. The setGeometry() does two things: it locates the window on the screen and sets it size. The first two parameters are the x and y positions of the window. The third is the width and the fourth is the height of the window. In fact, it combines the resize() and move() methods in one method. The last method sets the application icon. To do this, we have created a QIcon object. The QIcon receives the path to our icon to be displayed.
-
+```
+上面的三个方法都继承自`QWidget`类。setGeometry()有两个作用：把窗口放到屏幕上并且设置窗口大小。参数分别代表屏幕坐标的x、y和窗口大小的宽、高。也就是这个方法是resize()和move()的合体。最后一个方法是添加了图标。先创建一个QIcon对象，然后接受一个路径作为参数显示图标。
+```
 if __name__ == '__main__':
     
     app = QApplication(sys.argv)
     ex = Example()
-    sys.exit(app.exec_())  
-The application and example objects are created. The main loop is started.
+    sys.exit(app.exec_())
+````
+应用和示例的对象创立，主循环开始。
+程序预览：
+
+![icon](./images/1-icon.png)
+
+## 例3，提示框
+```
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+"""
+ZetCode PyQt5 tutorial 
+
+This example shows a tooltip on 
+a window and a button.
+
+author: Jan Bodnar
+website: zetcode.com 
+last edited: January 2015
+"""
+
+import sys
+from PyQt5.QtWidgets import (QWidget, QToolTip, 
+    QPushButton, QApplication)
+from PyQt5.QtGui import QFont    
+
+
+class Example(QWidget):
+    
+    def __init__(self):
+        super().__init__()
+        
+        self.initUI()
+        
+        
+    def initUI(self):
+        
+        QToolTip.setFont(QFont('SansSerif', 10))
+        
+        self.setToolTip('This is a <b>QWidget</b> widget')
+        
+        btn = QPushButton('Button', self)
+        btn.setToolTip('This is a <b>QPushButton</b> widget')
+        btn.resize(btn.sizeHint())
+        btn.move(50, 50)       
+        
+        self.setGeometry(300, 300, 300, 200)
+        self.setWindowTitle('Tooltips')    
+        self.show()
+        
+        
+if __name__ == '__main__':
+    
+    app = QApplication(sys.argv)
+    ex = Example()
+    sys.exit(app.exec_())
+```
+在这个例子中，我们为应用创建了两个提示框。
+```
+QToolTip.setFont(QFont('SansSerif', 10))
+```
+这个静态方法设置了提示框的字体，我们使用了10px的SansSerif字体。
+```
+self.setToolTip('This is a <b>QWidget</b> widget')
+```
+调用`setTooltip()`创建提示框可以使用富文本格式的内容。
+```
+btn = QPushButton('Button', self)
+btn.setToolTip('This is a <b>QPushButton</b> widget')
+```
+创建了一个按钮，并且为按钮添加了一个提示框。
+```
+btn.resize(btn.sizeHint())
+btn.move(50, 50)
+```
+调整按钮大小，并让按钮在屏幕上显示出来，`sizeHint()`方法提供了一个默认的按钮大小。
+
+程序预览：
+
+![tooltip](./images/1-tooltips.png)
+
+## 例4，关闭窗口
+
+
+## 例5，消息盒子
+
+## 例6，窗口居中
