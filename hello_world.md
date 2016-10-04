@@ -1,4 +1,4 @@
-# Hello Worl
+# Hello World
 
 ##本章学习Qt的基本功能
 
