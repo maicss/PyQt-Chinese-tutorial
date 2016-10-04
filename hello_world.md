@@ -144,7 +144,7 @@ self.setGeometry(300, 300, 300, 220)
 self.setWindowTitle('Icon')
 self.setWindowIcon(QIcon('web.png'))  
 ```
-上面的三个方法都继承自`QWidget`类。setGeometry()有两个作用：把窗口放到屏幕上并且设置窗口大小。参数分别代表屏幕坐标的x、y和窗口大小的宽、高。也就是这个方法是resize()和move()的合体。最后一个方法是添加了图标。先创建一个QIcon对象，然后接受一个路径作为参数显示图标。
+上面的三个方法都继承自`QWidget`类。setGeometry()有两个作用：把窗口放到屏幕上并且设置窗口大小。参数分别代表屏幕坐标的x、y和窗口大小的宽、高。也就是说这个方法是resize()和move()的合体。最后一个方法是添加了图标。先创建一个QIcon对象，然后接受一个路径作为参数显示图标。
 ```
 if __name__ == '__main__':
     
@@ -234,7 +234,75 @@ btn.move(50, 50)
 ![tooltip](./images/1-tooltips.png)
 
 ## 例4，关闭窗口
+关闭一个窗口最直观的方式就是点击标题栏的那个叉，这个例子里，我们展示的是如何用程序关闭一个窗口。这里我们将接触到一点single和slots的知识。
 
+本例使用的是QPushButton组件类。
+
+```
+QPushButton(string text, QWidget parent = None)
+```
+text参数是想要显示的按钮名称，parent参数是放在按钮上的组件，在我们的 例子里，这个参数是QWidget。应用中的组件都是一层一层（继承而来的？）的，在这个层里，大部分的组件都有自己的父级，没有父级的组件，是顶级的窗口。
+```
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+"""
+ZetCode PyQt5 tutorial 
+
+This program creates a quit
+button. When we press the button,
+the application terminates. 
+
+author: Jan Bodnar
+website: zetcode.com 
+last edited: January 2015
+"""
+
+import sys
+from PyQt5.QtWidgets import QWidget, QPushButton, QApplication
+from PyQt5.QtCore import QCoreApplication
+
+
+class Example(QWidget):
+    
+    def __init__(self):
+        super().__init__()
+        
+        self.initUI()
+        
+        
+    def initUI(self):               
+        
+        qbtn = QPushButton('Quit', self)
+        qbtn.clicked.connect(QCoreApplication.instance().quit)
+        qbtn.resize(qbtn.sizeHint())
+        qbtn.move(50, 50)       
+        
+        self.setGeometry(300, 300, 250, 150)
+        self.setWindowTitle('Quit button')    
+        self.show()
+        
+        
+if __name__ == '__main__':
+    
+    app = QApplication(sys.argv)
+    ex = Example()
+    sys.exit(app.exec_())
+```
+In this example, we create a quit button. Upon clicking on the button, the application terminates.
+
+from PyQt5.QtCore import QCoreApplication
+We need an object from the QtCore module.
+
+qbtn = QPushButton('Quit', self)
+We create a push button. The button is an instance of the QPushButton class. The first parameter of the constructor is the label of the button. The second parameter is the parent widget. The parent widget is the Example widget, which is a QWidget by inheritance.
+
+qbtn.clicked.connect(QCoreApplication.instance().quit)
+The event processing system in PyQt5 is built with the signal & slot mechanism. If we click on the button, the signal clicked is emitted. The slot can be a Qt slot or any Python callable. The QCoreApplication contains the main event loop; it processes and dispatches all events. The instance() method gives us its current instance. Note that QCoreApplication is created with the QApplication. The clicked signal is connected to the quit() method which terminates the application. The communication is done between two objects: the sender and the receiver. The sender is the push button, the receiver is the application object.
+
+程序预览：
+
+![quitbutton](./images/1-quitbutton.png)
 
 ## 例5，消息盒子
 
