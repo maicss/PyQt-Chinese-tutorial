@@ -1,4 +1,4 @@
-# Hello World
+# Hello Worl
 
 ##本章学习Qt的基本功能
 
@@ -369,16 +369,92 @@ reply = QMessageBox.question(self, 'Message',
     "Are you sure to quit?", QMessageBox.Yes | 
     QMessageBox.No, QMessageBox.No)
 ```
-创建了一个有俩按钮的消息We show a message box with two buttons: Yes and No. The first string appears on the titlebar. The second string is the message text displayed by the dialog. The third argument specifies the combination of buttons appearing in the dialog. The last parameter is the default button. It is the button which has initially the keyboard focus. The return value is stored in the reply variable.
-
+我们创建了一个消息框，上面有俩按钮：Yes和No.第一个字符串显示在消息框的标题栏，第二个字符串显示在对话框，第三个参数是消息框的俩按钮，最后一个参数是默认按钮，这个按钮是默认选中的。返回值在变量`reply`里。
+```
 if reply == QtGui.QMessageBox.Yes:
     event.accept()
 else:
-    event.ignore()  
-Here we test the return value. If we click the Yes button, we accept the event which leads to the closure of the widget and to the termination of the application. Otherwise we ignore the close event.
+    event.ignore()
+```
+这里判断返回值，如果点击的是Yes按钮，我们就关闭组件和应用，否者就忽略关闭事件。
 
 程序预览：
 
 ![messagebox](./images/1-messagebox.png)
 
 ## 例6，窗口居中
+
+```
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+"""
+ZetCode PyQt5 tutorial 
+
+This program centers a window 
+on the screen. 
+
+author: Jan Bodnar
+website: zetcode.com 
+last edited: January 2015
+"""
+
+import sys
+from PyQt5.QtWidgets import QWidget, QDesktopWidget, QApplication
+
+
+class Example(QWidget):
+    
+    def __init__(self):
+        super().__init__()
+        
+        self.initUI()
+        
+        
+    def initUI(self):               
+        
+        self.resize(250, 150)
+        self.center()
+        
+        self.setWindowTitle('Center')    
+        self.show()
+        
+        
+    def center(self):
+        
+        qr = self.frameGeometry()
+        cp = QDesktopWidget().availableGeometry().center()
+        qr.moveCenter(cp)
+        self.move(qr.topLeft())
+        
+        
+if __name__ == '__main__':
+    
+    app = QApplication(sys.argv)
+    ex = Example()
+    sys.exit(app.exec_())
+```
+QtGui.QDesktopWidget类提供了用户的桌面信息，其中就有屏幕的大小。
+
+`self.center()`方法会将窗口放置在中间的位置，这个放置是自定义的。
+```
+qr = self.frameGeometry()
+```
+这样我们得到了主窗口的大小。
+```
+cp = QDesktopWidget().availableGeometry().center()
+```
+我们获取到了显示器的分辨率，然后得到了中间点的位置。
+```
+qr.moveCenter(cp)
+```
+我们已知了自己的窗口大小，然后把自己窗口的中心点放置到屏幕的中心点即可，窗口大小并没有改变。
+Our rectangle has already its width and height. Now we set the center of the rectangle to the center of the screen. The rectangle's size is unchanged.
+```
+self.move(qr.topLeft())
+```
+然后把窗口的坐上角移动到qr的矩形上，这样就居中了我们自己的窗口。
+
+- [ ] TODO：这个翻译的好扯
+
+**这个例子没有程序预览**
