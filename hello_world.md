@@ -76,7 +76,7 @@ sys.exit(app.exec_())
 exec_()之所以有个下划线，是因为exec是一个Python的关键字。
 
 程序预览：
-[!simple](./images/1-simple.png)
+![simple](./images/1-simple.png)
 
 ## 例2，带窗口图标
 
@@ -133,8 +133,9 @@ class Example(QWidget):
         ...
 ```
 面向对象编程最重要的三个部分是类(class)、数据和方法。我们创建了一个类的调用，这个类继承自QWidget。这就意味着，我们调用了两个构造器，一个是这个类本身的，一个是这个类继承的。super()构造器方法返回父级的对象。`__init__()`方法是构造器的一个方法。
-
+```
 self.initUI() 
+```
 The creation of the GUI is delegated to the initUI() method.
 
 self.setGeometry(300, 300, 300, 220)
