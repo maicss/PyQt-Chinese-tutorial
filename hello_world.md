@@ -76,6 +76,7 @@ sys.exit(app.exec_())
 exec_()之所以有个下划线，是因为exec是一个Python的关键字。
 
 程序预览：
+
 ![simple](./images/1-simple.png)
 
 ## 例2，带窗口图标
