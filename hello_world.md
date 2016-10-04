@@ -289,16 +289,19 @@ if __name__ == '__main__':
     ex = Example()
     sys.exit(app.exec_())
 ```
-In this example, we create a quit button. Upon clicking on the button, the application terminates.
-
+这里创建了一个点击之后就退出窗口的按钮。
+```
 from PyQt5.QtCore import QCoreApplication
-We need an object from the QtCore module.
-
+```
+程序需要QtCore对象。
+```
 qbtn = QPushButton('Quit', self)
-We create a push button. The button is an instance of the QPushButton class. The first parameter of the constructor is the label of the button. The second parameter is the parent widget. The parent widget is the Example widget, which is a QWidget by inheritance.
-
+```
+创建一个继承自`QPushButton`的按钮。第一个参数是按钮的文本，第二个参数是按钮的父级组件，这个例子中，父级组件就是我们创建的继承自Qwidget的Example类。
+```
 qbtn.clicked.connect(QCoreApplication.instance().quit)
-The event processing system in PyQt5 is built with the signal & slot mechanism. If we click on the button, the signal clicked is emitted. The slot can be a Qt slot or any Python callable. The QCoreApplication contains the main event loop; it processes and dispatches all events. The instance() method gives us its current instance. Note that QCoreApplication is created with the QApplication. The clicked signal is connected to the quit() method which terminates the application. The communication is done between two objects: the sender and the receiver. The sender is the push button, the receiver is the application object.
+```
+事件传递系统在PyQt5内建的single和slot机制里面。点击按钮之后，信号会被捕捉并给出既定的反应。QCoreApplication包含了事件的主循环，它能添加和删除所有的事件，instance()创建了一个它的实例。QCoreApplication是在QApplication里创建的。 点击事件和能终止进程并退出应用的quit函数绑定在了一起。The communication is done between two objects: the sender and the receiver. 在发送者和接受者之间建立了通讯，发送者就是按钮，接受者就是应用对象
 
 程序预览：
 
