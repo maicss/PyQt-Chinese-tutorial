@@ -436,7 +436,11 @@ if __name__ == '__main__':
 ```
 QtGui.QDesktopWidget类提供了用户的桌面信息，其中就有屏幕的大小。
 
-`self.center()`方法会将窗口放置在中间的位置，这个放置是自定义的。
+```
+self.center()
+```
+
+这个方法是调用我们下面写的，实现对话框居中的方法。
 ```
 qr = self.frameGeometry()
 ```
@@ -444,16 +448,15 @@ qr = self.frameGeometry()
 ```
 cp = QDesktopWidget().availableGeometry().center()
 ```
-我们获取到了显示器的分辨率，然后得到了中间点的位置。
+获取到显示器的分辨率，然后得到了中间点的位置。
 ```
 qr.moveCenter(cp)
 ```
-我们已知了自己的窗口大小，然后把自己窗口的中心点放置到屏幕的中心点即可，窗口大小并没有改变。
-Our rectangle has already its width and height. Now we set the center of the rectangle to the center of the screen. The rectangle's size is unchanged.
+然后把自己窗口的中心点放置到qr的中心点。
 ```
 self.move(qr.topLeft())
 ```
-然后把窗口的坐上角移动到qr的矩形上，这样就居中了我们自己的窗口。
+然后把窗口的坐上角移动到qr的矩形的左上角上，这样就居中了我们自己的窗口。
 
 - [ ] TODO：这个翻译的好扯
 
