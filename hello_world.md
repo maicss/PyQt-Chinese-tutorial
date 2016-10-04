@@ -5,6 +5,8 @@
 
 这个简单的小例子展示的是一个小窗口。但是我们可以在这个小窗口上面做很多事情，改变大小，最大化，最小化等，这需要很多代码才能实现。这在很多应用中很常见，没必要每次都要重写这部分代码，Qt已经提供了这些功能。PyQt5是一个高级的工具集合，相比使用低级的工具，PyQt能省略上百行代码。
 
+## 例1，简单的窗口
+
 ``` python
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
@@ -72,3 +74,77 @@ sys.exit(app.exec_())
 最后，我们进入了应用的主循环中，事件处理器这个时候开始工作。主循环从窗口上接收事件，并把事件传入到派发到应用控件里。当调用exit()方法或直接销毁主控件时，主循环就会结束。sys.exit()方法能确保主循环安全退出。外部环境能通知主控件怎么结束。
 
 exec_()之所以有个下划线，是因为exec是一个Python的关键字。
+
+程序预览：
+[!simple](./images/1-simple.png)
+
+## 例2，带窗口图标
+
+窗口图标通常是显示在窗口的左上角，标题栏的最左边。下面的例子就是怎么用PyQt5创建一个这样的窗口。
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+"""
+ZetCode PyQt5 tutorial 
+
+This example shows an icon
+in the titlebar of the window.
+
+author: Jan Bodnar
+website: zetcode.com 
+last edited: January 2015
+"""
+
+import sys
+from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtGui import QIcon
+
+
+class Example(QWidget):
+    
+    def __init__(self):
+        super().__init__()
+        
+        self.initUI()
+        
+        
+    def initUI(self):
+        
+        self.setGeometry(300, 300, 300, 220)
+        self.setWindowTitle('Icon')
+        self.setWindowIcon(QIcon('web.png'))        
+    
+        self.show()
+        
+        
+if __name__ == '__main__':
+    
+    app = QApplication(sys.argv)
+    ex = Example()
+    sys.exit(app.exec_()) 
+```
+前一个例子是使用的[过程式编程](https://www.wikiwand.com/zh/%E8%BF%87%E7%A8%8B%E5%BC%8F%E7%BC%96%E7%A8%8B)。Python还支持[面向对象](https://www.wikiwand.com/zh/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)的编程：
+```
+class Example(QWidget):
+    
+    def __init__(self):
+        super().__init__()
+        ...
+```
+面向对象编程最终要的三个部分是类(class)、数据和方法。我们创建了一个类的调用，这个类继承自QWidget。这就意味着，我们调用了两个构造器，一个是这个类本身的，一个是这个类继承的。super()方法返回一个父级 method returns the parent object of the Example class and we call its constructor. The __init__() method is a constructor method in Python language.
+
+self.initUI() 
+The creation of the GUI is delegated to the initUI() method.
+
+self.setGeometry(300, 300, 300, 220)
+self.setWindowTitle('Icon')
+self.setWindowIcon(QIcon('web.png'))  
+All three methods have been inherited from the QWidget class. The setGeometry() does two things: it locates the window on the screen and sets it size. The first two parameters are the x and y positions of the window. The third is the width and the fourth is the height of the window. In fact, it combines the resize() and move() methods in one method. The last method sets the application icon. To do this, we have created a QIcon object. The QIcon receives the path to our icon to be displayed.
+
+if __name__ == '__main__':
+    
+    app = QApplication(sys.argv)
+    ex = Example()
+    sys.exit(app.exec_())  
+The application and example objects are created. The main loop is started.
