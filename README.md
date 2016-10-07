@@ -1,4 +1,4 @@
-# PyQt5-Chinese-tutoral
+# PyQt5-Chinese-tutorial
 PyQt5中文教程，翻译自 [zetcode](http://zetcode.com/gui/pyqt5/)
 
 这个教程比较好的地方是，能讲解每一段代码的含义。
@@ -15,10 +15,10 @@ PyQt5中文教程，翻译自 [zetcode](http://zetcode.com/gui/pyqt5/)
 
 计划：
 
-- [ ]先大致翻译一遍
-- [ ]统一称呼，检查错别字，检查格式
-- [ ]添加原来没有的图片，统一添加Windows的，然后注解跟Mac不一样的地方
-- [ ]文本润色
+- [ ] 先大致翻译一遍
+- [ ] 统一称呼，检查错别字，检查格式
+- [ ] 添加原来没有的图片，统一添加Windows的，然后注解跟Mac不一样的地方
+- [ ] 文本润色
 
 翻译吐槽：
 
