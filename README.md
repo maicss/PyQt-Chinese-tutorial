@@ -1,5 +1,5 @@
 # PyQt5-Chinese-tutorial
-PyQt5中文教程，翻译自 [zetcode](http://zetcode.com/gui/pyqt5/)
+PyQt5中文教程，翻译自 [zetcode](http://zetcode.com/gui/pyqt5/)，项目地址：https://github.com/maicss/PyQt5-Chinese-tutoral
 
 这个教程比较好的地方是，能讲解每一段代码的含义。
 
