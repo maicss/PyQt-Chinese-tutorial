@@ -1,6 +1,6 @@
 # 介绍
 
-PyQt5中文教程，翻译自 [zetcode](http://zetcode.com/gui/pyqt5/)，项目地址：[https://github.com/maicss/PyQt5-Chinese-tutoral](https://github.com/maicss/PyQt5-Chinese-tutoral)
+PyQt5中文教程，翻译自 [zetcode](http://zetcode.com/gui/pyqt5/)，GitBook 预览地址：[https://maicss.gitbook.io/pyqt5-chinese-tutoral/](https://maicss.gitbook.io/pyqt5-chinese-tutoral/)
 
 这个教程比较好的地方是，能讲解每一段代码的含义。
 
@@ -14,8 +14,8 @@ PyQt5中文教程，翻译自 [zetcode](http://zetcode.com/gui/pyqt5/)，项目�
 
 ## 翻译吐槽：
 
-* label这个词好难翻译，有时候就是个占位符的意思，说是文字说明吧，有专门的词caption，但是像checkbox的名称这种的，不是文字说明又是啥...，但是居然还用label说图标这种事情，也是醉了。
-* 源文档更新了，但是没有更新日志，只能一段段的比对……长了记性，创建了一个源文档的文件，下次直接copy的时候用VCS对比就可以了。
+* label 这个词好难翻译，有时候就是个占位符的意思，说是文字说明吧，有专门的词 caption，但是像 checkbox 的名称这种的，不是文字说明又是啥...，但是居然还用 label 说图标这种事情，也是醉了。
+* 源文档更新了，但是没有更新日志，只能一段段的比对……长了记性，创建了一个源文档的文件，下次直接 copy 的时候用 VCS 对比就可以了。
 * 更新了一些图片，主要是原来没有的。因为手头没有Windows，而且源文档的图片也是不是Windows10，都不是一个风格的，凑合着看吧……
 
 ## 更新：
