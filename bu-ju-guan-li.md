@@ -64,7 +64,7 @@ if __name__ == '__main__':
 
 我们使用move\(\)方法定位了每一个元素，使用x、y坐标。x、y坐标的原点是程序的左上角。
 
-```
+```text
 lbl1 = QLabel('Zetcode', self)
 lbl1.move(15, 10)
 ```
@@ -73,7 +73,7 @@ lbl1.move(15, 10)
 
 程序展示：
 
-![Absolute positioning](./images/3-absolute.png)
+![Absolute positioning](.gitbook/assets/3-absolute.png)
 
 ## 盒布局
 
@@ -140,14 +140,14 @@ if __name__ == '__main__':
 
 上面的例子完成了在应用的右下角放了两个按钮的需求。当改变窗口大小的时候，它们能依然保持在相对的位置。我们同时使用了`QHBoxLayout`和`QVBoxLayout`。
 
-```
+```text
 okButton = QPushButton("OK")
 cancelButton = QPushButton("Cancel")
 ```
 
 这是创建了两个按钮。
 
-```
+```text
 hbox = QHBoxLayout()
 hbox.addStretch(1)
 hbox.addWidget(okButton)
@@ -156,7 +156,7 @@ hbox.addWidget(cancelButton)
 
 创建一个水平布局，并增加弹性空间和两个按钮。stretch函数在两个按钮前面增加了一块弹性空间，它会将按钮挤到窗口的右边。
 
-```
+```text
 vbox = QVBoxLayout()
 vbox.addStretch(1)
 vbox.addLayout(hbox)
@@ -164,7 +164,7 @@ vbox.addLayout(hbox)
 
 为了布局需要，我们把这个水平布局放到了一个垂直布局盒里面。弹性元素会把水平布局挤到窗口的下边。
 
-```
+```text
 self.setLayout(vbox)
 ```
 
@@ -172,7 +172,7 @@ self.setLayout(vbox)
 
 程序预览：
 
-![buttons](./images/3-buttons.png)
+![buttons](.gitbook/assets/3-buttons.png)
 
 ## 栅格布局
 
@@ -240,14 +240,14 @@ if __name__ == '__main__':
 
 这个例子里，我们创建了栅格化的按钮。
 
-```
+```text
 grid = QGridLayout()
 self.setLayout(grid)
 ```
 
 创建一个QGridLayout实例，并把它放到程序窗口里。
 
-```
+```text
 names = ['Cls', 'Bck', '', 'Close',
         '7', '8', '9', '/',
         '4', '5', '6', '*',
@@ -257,13 +257,13 @@ names = ['Cls', 'Bck', '', 'Close',
 
 这是我们将要使用的按钮的名称。
 
-```
+```text
 positions = [(i,j) for i in range(5) for j in range(4)]
 ```
 
 创建按钮位置列表。
 
-```
+```text
 for position, name in zip(positions, names):
 
     if name == '':
@@ -276,7 +276,7 @@ for position, name in zip(positions, names):
 
 程序预览：
 
-![Calculator skeleton](./images/3-calculator.png)
+![Calculator skeleton](.gitbook/assets/3-calculator.png)
 
 ## 制作提交反馈信息的布局
 
@@ -348,14 +348,14 @@ if __name__ == '__main__':
 
 我们创建了一个有三个标签的窗口。两个行编辑和一个文版编辑，这是用`QGridLayout`模块搞定的。
 
-```
+```text
 grid = QGridLayout()
 grid.setSpacing(10)
 ```
 
 创建标签之间的空间。
 
-```
+```text
 grid.addWidget(reviewEdit, 3, 1, 5, 1)
 ```
 
@@ -363,5 +363,5 @@ grid.addWidget(reviewEdit, 3, 1, 5, 1)
 
 程序预览：
 
-![review example](./images/3-review.png)
+![review example](.gitbook/assets/3-review.png)
 
