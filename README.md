@@ -1,4 +1,4 @@
-# 介绍
+# 前言
 
 PyQt5中文教程，翻译自 [zetcode](http://zetcode.com/gui/pyqt5/)，GitBook 预览地址：[https://maicss.gitbook.io/pyqt5-chinese-tutoral/](https://maicss.gitbook.io/pyqt5-chinese-tutoral/)
 
