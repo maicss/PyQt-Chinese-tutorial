@@ -1,10 +1,10 @@
 # 控件\(1\)
 
-控件就像是应用这座房子的一块块砖。PyQt5有很多的控件，比如按钮，单选框，滑动条，复选框等等。在本章，我们将介绍一些很有用的控件：`QCheckBox`，`ToggleButton`，`QSlider`，`QProgressBar`和`QCalendarWidget`。
+控件就像是应用这座房子的一块块砖。PyQt5有很多的控件，比如按钮，单选框，滑动条，复选框等等。在本章，我们将介绍一些很有用的控件：`QCheckBox`，`ToggleButton`，`QSlider`，`QProgressBar` 和 `QCalendarWidget`。
 
 ## QCheckBox
 
-`QCheckBox`组件有俩状态：开和关。通常跟标签一起使用，用在激活和关闭一些选项的场景。
+`QCheckBox` 组件有俩状态：开和关。通常跟标签一起使用，用在激活和关闭一些选项的场景。
 
 ```python
 #!/usr/bin/python3
@@ -97,7 +97,7 @@ def changeTitle(self, state):
 
 ## 切换按钮
 
-切换按钮就是`QPushButton`的一种特殊模式。 它只有两种状态：按下和未按下。我们再点击的时候切换两种状态，有很多场景会使用到这个功能。
+切换按钮就是`QPushButton`的一种特殊模式。 它只有两种状态：按下和未按下。我们在点击的时候切换两种状态，有很多场景会使用到这个功能。
 
 ```python
 #!/usr/bin/python3
