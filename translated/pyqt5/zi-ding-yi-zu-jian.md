@@ -220,5 +220,5 @@ def changeValue(self, value):
 
 拖动滑块的时候，调用了`changeValue()`方法。这个方法内部，我们自定义了一个可以传参的updateBW信号。参数就是滑块的当前位置。这个数值之后还用来于Burning组件，然后重新渲染Burning组件。
 
-![burning widget](.gitbook/assets/10-burning.png)
+![burning widget](images/10-burning.png)
 

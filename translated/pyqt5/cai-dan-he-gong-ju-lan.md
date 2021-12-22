@@ -62,7 +62,7 @@ self.statusBar().showMessage('Ready')
 
 调用`QtGui.QMainWindow`类的`statusBar()`方法，创建状态栏。第一次调用会创建一个状态栏，而再次调用会返回一个状态栏对象。`showMessage()`方法在状态栏上显示一条信息。
 
-程序预览： ![status](.gitbook/assets/2-status.png)
+程序预览： ![status](images/2-status.png)
 
 ## 菜单栏
 
@@ -145,7 +145,7 @@ fileMenu.addAction(exitAct)
 
 `menuBar()`创建菜单栏。这里创建了一个菜单栏，并用`addMenu()`在上面添加了一个file菜单，用`addAction()`关联了点击退出应用的事件。
 
-程序预览： ![menu](.gitbook/assets/2-menu.png)
+程序预览： ![menu](images/2-menu.png)
 
 ## 子菜单
 
@@ -217,7 +217,7 @@ impMenu.addAction(impAct)
 
 使用`addAction()`添加一个动作。
 
-程序预览： ![submenu](.gitbook/assets/2-submenu.png)
+程序预览： ![submenu](images/2-submenu.png)
 
 ## 勾选菜单
 
@@ -307,7 +307,7 @@ def toggleMenu(self, state):
 
 依据选中状态切换状态栏的显示与否。 程序预览：
 
-![checkmenu](.gitbook/assets/2-checkmenu.png)
+![checkmenu](images/2-checkmenu.png)
 
 ## 右键菜单
 
@@ -382,7 +382,7 @@ if action == quitAct:
 
 程序预览：
 
-![contextmenu](.gitbook/assets/2-contextmenu.png)
+![contextmenu](images/2-contextmenu.png)
 
 ## 工具栏
 
@@ -456,7 +456,7 @@ self.toolbar.addAction(exitAct)
 
 程序预览：
 
-![toolbar](.gitbook/assets/2-toolbar.png)
+![toolbar](images/2-toolbar.png)
 
 ## 主窗口
 
@@ -535,5 +535,5 @@ self.setCentralWidget(textEdit)
 
 程序预览：
 
-![mainwindow](.gitbook/assets/2-mainwindow.png)
+![mainwindow](images/2-mainwindow.png)
 

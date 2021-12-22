@@ -93,7 +93,7 @@ sys.exit(app.exec_())
 
 程序预览：
 
-![simple](.gitbook/assets/1-simple.png)
+![simple](images/1-simple.png)
 
 ## 例2，带窗口图标
 
@@ -184,7 +184,7 @@ if __name__ == '__main__':
 
 程序预览：
 
-![icon](.gitbook/assets/1-icon.png)
+![icon](images/1-icon.png)
 
 ## 例3，提示框
 
@@ -270,7 +270,7 @@ btn.move(50, 50)
 
 程序预览：
 
-![tooltip](.gitbook/assets/1-tooltips.png)
+![tooltip](images/1-tooltips.png)
 
 ## 例4，关闭窗口
 
@@ -354,7 +354,7 @@ qbtn.clicked.connect(QCoreApplication.instance().quit)
 
 程序预览：
 
-![quitbutton](.gitbook/assets/1-quitbutton.png)
+![quitbutton](images/1-quitbutton.png)
 
 ## 例5，消息盒子
 
@@ -435,7 +435,7 @@ else:
 
 程序预览：
 
-![messagebox](.gitbook/assets/1-messagebox.png)
+![messagebox](images/1-messagebox.png)
 
 ## 例6，窗口居中
 
@@ -524,5 +524,5 @@ self.move(qr.topLeft())
 
 程序预览：
 
-![center](.gitbook/assets/1-center.png)
+![center](images/1-center.png)
 

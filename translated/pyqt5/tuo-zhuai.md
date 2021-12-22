@@ -123,7 +123,7 @@ edit.setDragEnabled(True)
 
 程序展示：
 
-![drag &amp; drop](.gitbook/assets/8-dragdrop.png)
+![drag &amp; drop](images/8-dragdrop.png)
 
 ## 拖放按钮组件
 

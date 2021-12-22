@@ -2,7 +2,7 @@
 
 * [欢迎](README.md)
 * [pyqt6](pyqt6/README.md)
-  * [index](pyqt6/index.md)
+  * [开始](pyqt6/index.md)
   * [PyQt6 简介](pyqt6/introduction.md)
   * [PyQt6 日期和时间](pyqt6/datetime.md)
   * [PyQt6 的第一个程序](pyqt6/firstprograms.md)

@@ -72,7 +72,7 @@ lbl.setPixmap(pixmap)
 
 程序展示：
 
-![pixmap](.gitbook/assets/7-pixmap.png)
+![pixmap](images/7-pixmap.png)
 
 ## 行编辑
 
@@ -160,7 +160,7 @@ def onChanged(self, text):
 
 程序展示：
 
-![QLineEdit](.gitbook/assets/7-qlineedit.png)
+![QLineEdit](images/7-qlineedit.png)
 
 ## QSplitter
 
@@ -262,7 +262,7 @@ splitter2.addWidget(splitter1)
 
 程序展示：
 
-![QSplitter widget](.gitbook/assets/7-qsplitter.png)
+![QSplitter widget](images/7-qsplitter.png)
 
 ## 下拉选框
 
@@ -359,5 +359,5 @@ def onActivated(self, text):
 
 程序展示：
 
-![QComboBox](.gitbook/assets/7-qcombobox.png)
+![QComboBox](images/7-qcombobox.png)
 

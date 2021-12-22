@@ -81,7 +81,7 @@ if ok:
 
 程序展示：
 
-![input dialog](.gitbook/assets/5-inputdialog.png)
+![input dialog](images/5-inputdialog.png)
 
 ## 选取颜色
 
@@ -175,7 +175,7 @@ if col.isValid():
 
 程序展示：
 
-![color dialog](.gitbook/assets/5-colordialog.png)
+![color dialog](images/5-colordialog.png)
 
 ## 选择字体
 
@@ -264,7 +264,7 @@ if ok:
 
 程序展示：
 
-![font dialog](.gitbook/assets/5-fontdialog.png)
+![font dialog](images/5-fontdialog.png)
 
 ## 选择文件
 
@@ -369,5 +369,5 @@ if fname[0]:
 
 程序展示：
 
-![file Dialog](.gitbook/assets/5-filedialog.png)
+![file Dialog](images/5-filedialog.png)
 

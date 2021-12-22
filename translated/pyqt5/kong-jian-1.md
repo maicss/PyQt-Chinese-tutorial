@@ -93,7 +93,7 @@ def changeTitle(self, state):
 
 程序展示：
 
-![QCheckBox](.gitbook/assets/6-qcheckbox.png)
+![QCheckBox](images/6-qcheckbox.png)
 
 ## 切换按钮
 
@@ -230,7 +230,7 @@ self.square.setStyleSheet("QFrame { background-color: %s }" %
 
 程序展示：
 
-![toggle button](.gitbook/assets/6-togglebutton.png)
+![toggle button](images/6-togglebutton.png)
 
 ## 滑块
 
@@ -334,7 +334,7 @@ if value == 0:
 
 程序展示：
 
-![QSlider widget](.gitbook/assets/6-qslider.png)
+![QSlider widget](images/6-qslider.png)
 
 ## 进度条
 
@@ -463,7 +463,7 @@ def doAction(self):
 
 程序展示：
 
-![QProgressBar](.gitbook/assets/6-qprogressbar.png)
+![QProgressBar](images/6-qprogressbar.png)
 
 ## 日历
 
@@ -555,5 +555,5 @@ def showDate(self, date):
 
 程序展示：
 
-![calendar](.gitbook/assets/6-calendar.png)
+![calendar](images/6-calendar.png)
 

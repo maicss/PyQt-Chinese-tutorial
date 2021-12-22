@@ -73,7 +73,7 @@ lbl1.move(15, 10)
 
 程序展示：
 
-![Absolute positioning](.gitbook/assets/3-absolute.png)
+![Absolute positioning](images/3-absolute.png)
 
 ## 盒布局
 
@@ -172,7 +172,7 @@ self.setLayout(vbox)
 
 程序预览：
 
-![buttons](.gitbook/assets/3-buttons.png)
+![buttons](images/3-buttons.png)
 
 ## 栅格布局
 
@@ -276,7 +276,7 @@ for position, name in zip(positions, names):
 
 程序预览：
 
-![Calculator skeleton](.gitbook/assets/3-calculator.png)
+![Calculator skeleton](images/3-calculator.png)
 
 ## 制作提交反馈信息的布局
 
@@ -363,5 +363,5 @@ grid.addWidget(reviewEdit, 3, 1, 5, 1)
 
 程序预览：
 
-![review example](.gitbook/assets/3-review.png)
+![review example](images/3-review.png)
 

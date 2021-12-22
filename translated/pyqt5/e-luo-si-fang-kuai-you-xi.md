@@ -12,7 +12,7 @@
 
 方块展示：
 
-![tetrominoes](.gitbook/assets/11-tetrominoes.png)
+![tetrominoes](images/11-tetrominoes.png)
 
 PyQt5是专门为创建图形界面产生的，里面一些专门为制作游戏而开发的组件，所以PyQt5是能制作小游戏的。
 
@@ -847,7 +847,7 @@ self.coords = [[0,0] for i in range(4)]
 
 坐标系示意图：
 
-![coordinates](.gitbook/assets/11-coordinates.png)
+![coordinates](images/11-coordinates.png)
 
 上面的图片可以帮助我们更好的理解坐标值的意义。比如元组`(0, -1), (0, 0), (-1, 0), (-1, -1)`代表了一个Z形状的方块。这个图表就描绘了这个形状。
 
@@ -872,5 +872,5 @@ def rotateLeft(self):
 
 程序展示：
 
-![Tetris](.gitbook/assets/11-tetris.png)
+![Tetris](images/11-tetris.png)
 

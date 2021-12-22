@@ -101,7 +101,7 @@ qp.drawText(event.rect(), Qt.AlignCenter, self.text)
 
 程序展示：
 
-![drawing text](.gitbook/assets/9-drawtext.png)
+![drawing text](images/9-drawtext.png)
 
 ### 点的绘画
 
@@ -190,7 +190,7 @@ qp.drawPoint(x, y)
 
 程序展示：
 
-![points](.gitbook/assets/9-points.png)
+![points](images/9-points.png)
 
 ## 颜色
 
@@ -279,7 +279,7 @@ qp.drawRect(10, 15, 90, 60)
 
 程序展示：
 
-![colours](.gitbook/assets/9-colours.png)
+![colours](images/9-colours.png)
 
 ### QPen
 
@@ -382,7 +382,7 @@ qp.setPen(pen)
 
 程序展示：
 
-![pen styles](.gitbook/assets/9-penstyles.png)
+![pen styles](images/9-penstyles.png)
 
 ### QBrush
 
@@ -489,7 +489,7 @@ qp.drawRect(10, 15, 90, 60)
 
 程序展示：
 
-![brushes](.gitbook/assets/9-brushes.png)
+![brushes](images/9-brushes.png)
 
 ### 贝塞尔曲线
 

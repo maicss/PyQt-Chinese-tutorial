@@ -85,7 +85,7 @@ sld.valueChanged.connect(lcd.display)
 
 程序展示：
 
-![signal &amp; slot](.gitbook/assets/4-sigslot.png)
+![signal &amp; slot](images/4-sigslot.png)
 
 ## 重构事件处理器
 
@@ -252,7 +252,7 @@ def mouseMoveEvent(self, e):
 
 程序展示：
 
-![event object](.gitbook/assets/4-eventobject.png)
+![event object](images/4-eventobject.png)
 
 ## 事件发送
 
@@ -336,7 +336,7 @@ def buttonClicked(self):
 
 程序展示：
 
-![event sender](.gitbook/assets/4-eventsender.png)
+![event sender](images/4-eventsender.png)
 
 ## 信号发送
 
