@@ -219,6 +219,6 @@ def changeValue(self, value):
 
 ![The burning widget](./images/burning.png)
 
-图像: 烧录组件
+图示: 烧录组件
 
 本章的 PyQt6 教程里，我们创建了一个自定义部件。

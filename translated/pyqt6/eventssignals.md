@@ -84,7 +84,7 @@ sld.valueChanged.connect(lcd.display)
 
 ![信号和插槽](./images/sigslot.png)
 
-Figure: 信号和插槽
+图示: 信号和插槽
 
 ## PyQt6 重新实现事件处理器
 
@@ -238,7 +238,7 @@ self.label = QLabel(self.text, self)
 
 ![事件对象](./images/eventobject.png)
 
-Figure: 事件对象
+图示: 事件对象
 
 # PyQt6 事件触发者
 
@@ -324,7 +324,7 @@ def buttonClicked(self):
 
 ![事件触发者](./images/eventsender.png)
 
-Figure: 事件触发者
+图示: 事件触发者
 
 ## PyQt6 触发信号
 

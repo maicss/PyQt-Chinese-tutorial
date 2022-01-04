@@ -82,7 +82,7 @@ sys.exit(app.exec())
 
 ![Simple](./images/simple.png)
 
-Figure: Simple
+图示: Simple
 ## PyQt6 tooltip
 我们可以为程序创建一个气泡提示。
 
@@ -240,7 +240,7 @@ PyQt6 的事件处理系统是由信号和插槽机制构成的，点击按钮�
 
 ![Quit button](./images/quitbutton.png)
 
-Figure: Quit button
+图示:退出按钮
 
 ## PyQt6 弹窗
 默认情况下，如果我们点击标题栏上的 x 按钮，`QWidget` 会被关闭。有时我们想修改这个默认行为。 例如，如果在编辑器中打开了一个文件，修改了部分内容，我们需要显示一个消息框来确认退出程序的操作。
@@ -319,7 +319,7 @@ else:
 
 ![Message box](./images/messagebox.png)
 
-Figure: Message box
+图示:对话框
 
 ## PyQt6 窗口居中
 下面的脚本会在屏幕上显示一个居中的窗口。
