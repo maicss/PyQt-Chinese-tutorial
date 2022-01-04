@@ -82,7 +82,7 @@ if ok:
 
 ![Input dialog](./images/inputdialog.png)
 
-Figure: Input dialog
+图示：输入框
 
 ## PyQt6 QColorDialog
 `QColorDialog` 是可以选择颜色对话框。
@@ -159,11 +159,11 @@ if __name__ == '__main__':
 ``` python
 col = QColor(0, 0, 0)
 ```
-This is an initial colour of the QFrame background.
+这是 `QFrame` 的初始背景色。
 ``` python
 col = QColorDialog.getColor()
 ```
-This line pops up the QColorDialog.
+这一行弹出 `QColorDialog` 。
 ``` python
 if col.isValid():
 

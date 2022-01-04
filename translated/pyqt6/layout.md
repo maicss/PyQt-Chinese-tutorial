@@ -74,7 +74,7 @@ The label widget is positioned at x=15 and y=10.
 
 ![Absolute positioning](./images/absolute.png)
 
-Figure: Absolute positioning
+图示：绝对位置
 
 ## PyQt6 QHBoxLayout
 `QHBoxLayout` 和 `QVBoxLayout` 是基本的布局类，用于水平和垂直地排列小部件。
@@ -167,7 +167,7 @@ self.setLayout(vbox)
 
 ![按钮](./images/buttons.png)
 
-Figure: 按钮
+图示：按钮
 
 ## PyQt6 QGridLayout
 
@@ -266,7 +266,7 @@ for position, name in zip(positions, names):
 
 ![计算器骨架](./images/calculator.png)
 
-Figure: 计算器骨架
+图示：计算器骨架
 
 ## 示例：回复
 组件可以跨越多个行和列，下面的示例来演示这个。
@@ -355,6 +355,6 @@ grid.addWidget(reviewEdit, 3, 1, 5, 1)
 
 ![Review example](./images/review.png)
 
-Figure: Review example
+图示：评论框的例子
 
 本例展示了 PyQt6 的布局管理。
