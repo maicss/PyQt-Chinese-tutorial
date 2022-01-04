@@ -82,7 +82,7 @@ if ok:
 
 ![Input dialog](./images/inputdialog.png)
 
-图示:输入框
+图示：输入框
 
 ## PyQt6 QColorDialog
 `QColorDialog` 是可以选择颜色对话框。
