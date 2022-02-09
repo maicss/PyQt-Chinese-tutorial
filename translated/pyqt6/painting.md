@@ -59,7 +59,7 @@ class Example(QWidget):
 
         qp.setPen(QColor(168, 34, 3))
         qp.setFont(QFont('Decorative', 10))
-        qp.drawText(event.rect(), Qt.Alignment.AlignCenter, self.text)
+        qp.drawText(event.rect(), Qt.AlignmentFlag.AlignCenter, self.text)
 
 
 def main():
@@ -94,9 +94,9 @@ qp.setFont(QFont('Decorative', 10))
 这里定义了绘制文本的笔触和字体。
 
 ``` python
-qp.drawText(event.rect(), Qt.Alignment.AlignCenter, self.text)
+qp.drawText(event.rect(), Qt.AlignmentFlag.AlignCenter, self.text)
 ```
-drawText 方法在窗口上绘制文本。paintEvent 的rect方法返回需要更新的矩形。用 `Qt.Alignment.AlignCenter` 在两个维度上对齐文本。
+drawText 方法在窗口上绘制文本。paintEvent 的rect方法返回需要更新的矩形。用 `Qt.AlignmentFlag.AlignCenter` 在两个维度上对齐文本。
 
 ![Drawing text](./images/drawingtext.png)
 

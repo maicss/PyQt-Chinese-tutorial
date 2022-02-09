@@ -188,7 +188,7 @@ class Example(QWidget):
         self.text = f'x: {x},  y: {y}'
 
         self.label = QLabel(self.text, self)
-        grid.addWidget(self.label, 0, 0, Qt.Alignment.AlignTop)
+        grid.addWidget(self.label, 0, 0, Qt.AlignmentFlag.AlignTop)
 
         self.setMouseTracking(True)
         self.setLayout(grid)
