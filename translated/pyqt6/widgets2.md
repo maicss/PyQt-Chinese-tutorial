@@ -198,11 +198,11 @@ class Example(QWidget):
         bottom = QFrame(self)
         bottom.setFrameShape(QFrame.Shape.StyledPanel)
 
-        splitter1 = QSplitter(Qt.Orientations.Horizontal)
+        splitter1 = QSplitter(Qt.Orientation.Horizontal)
         splitter1.addWidget(topleft)
         splitter1.addWidget(topright)
 
-        splitter2 = QSplitter(Qt.Orientations.Vertical)
+        splitter2 = QSplitter(Qt.Orientation.Vertical)
         splitter2.addWidget(splitter1)
         splitter2.addWidget(bottom)
 
@@ -231,13 +231,13 @@ topleft.setFrameShape(QFrame.Shape.StyledPanel)
 ```
 给框架组件设置一些样式，这样更容易看清楚边界。
 ``` python
-splitter1 = QSplitter(Qt.Orientations.Horizontal)
+splitter1 = QSplitter(Qt.Orientation.Horizontal)
 splitter1.addWidget(topleft)
 splitter1.addWidget(topright)
 ```
 创建一个有俩框架组件的 `QSplitter` 组件。
 ``` python
-splitter2 = QSplitter(Qt.Orientations.Vertical)
+splitter2 = QSplitter(Qt.Orientation.Vertical)
 splitter2.addWidget(splitter1)
 ```
 再添加一个分割条和一个框架组件。
