@@ -253,7 +253,7 @@ class Example(QWidget):
 
     def initUI(self):
 
-        sld = QSlider(Qt.Orientations.Horizontal, self)
+        sld = QSlider(Qt.Orientation.Horizontal, self)
         sld.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         sld.setGeometry(30, 40, 200, 30)
         sld.valueChanged[int].connect(self.changeValue)
@@ -296,7 +296,7 @@ if __name__ == '__main__':
 示例中，模拟了音量控制。通过拖动滑块的手柄，我们可以改变标签上的图像。
 
 ``` python
-sld = QSlider(Qt.Orientations.Horizontal, self)
+sld = QSlider(Qt.Orientation.Horizontal, self)
 ```
 
 创建一个水平的 `QSlider`。

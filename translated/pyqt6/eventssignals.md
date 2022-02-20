@@ -50,7 +50,7 @@ class Example(QWidget):
     def initUI(self):
 
         lcd = QLCDNumber(self)
-        sld = QSlider(Qt.Orientations.Horizontal, self)
+        sld = QSlider(Qt.Orientation.Horizontal, self)
 
         vbox = QVBoxLayout()
         vbox.addWidget(lcd)
@@ -188,7 +188,7 @@ class Example(QWidget):
         self.text = f'x: {x},  y: {y}'
 
         self.label = QLabel(self.text, self)
-        grid.addWidget(self.label, 0, 0, Qt.Alignment.AlignTop)
+        grid.addWidget(self.label, 0, 0, Qt.AlignmentFlag.AlignTop)
 
         self.setMouseTracking(True)
         self.setLayout(grid)

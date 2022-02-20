@@ -124,7 +124,7 @@ class Example(QWidget):
 
         OVER_CAPACITY = 750
 
-        sld = QSlider(Qt.Orientations.Horizontal, self)
+        sld = QSlider(Qt.Orientation.Horizontal, self)
         sld.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         sld.setRange(1, OVER_CAPACITY)
         sld.setValue(75)

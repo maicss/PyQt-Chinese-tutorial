@@ -3,7 +3,7 @@
 
 本章教程，讲的是 PyQt6 中的拖拽操作。
 
-计算机图形界面中，拖拽操作是点击一个对象不放，把它放在另外一个地方或者另外一个对象上面的操作。一半来说，这会触发很多类型的行为，或者在两个对象上建立多种关系。
+计算机图形界面中，拖拽操作是点击一个对象不放，把它放在另外一个地方或者另外一个对象上面的操作。一般来说，这会触发很多类型的行为，或者在两个对象上建立多种关系。
 
 在计算机图形用户界面中，拖放是（或支持）点击虚拟对象并将其拖到不同位置或另一个虚拟对象上的动作。 一般来说，它可以用来调用多种动作，或者在两个抽象对象之间创建各种类型的关联。
 
@@ -166,7 +166,7 @@ class Button(QPushButton):
 
     def mouseMoveEvent(self, e):
 
-        if e.buttons() != Qt.MouseButtons.RightButton:
+        if e.buttons() != Qt.MouseButton.RightButton:
             return
 
         mimeData = QMimeData()
@@ -183,7 +183,7 @@ class Button(QPushButton):
 
         super().mousePressEvent(e)
 
-        if e.button() == Qt.MouseButtons.LeftButton:
+        if e.button() == Qt.MouseButton.LeftButton:
             print('press')
 
 
@@ -243,7 +243,7 @@ class Button(QPushButton):
 基于 `QPushButton` 创建了一个 `Button` 类，并实现了两个 `QPushButton` 方法：`mouseMoveEvent` 和 `mousePressEvent`。`mouseMoveEvent` 方法是处理拖放操作开始的地方。
 
 ``` python
-if e.buttons() != Qt.MouseButtons.RightButton:
+if e.buttons() != Qt.MouseButton.RightButton:
     return
 ```
 定义鼠标右键为触发拖拽操作的按钮，鼠标左键只会触发点击事件。
@@ -266,7 +266,7 @@ def mousePressEvent(self, e):
 
     super().mousePressEvent(e)
 
-    if e.button() == Qt.MouseButtons.LeftButton:
+    if e.button() == Qt.MouseButton.LeftButton:
         print('press')
 ```
 如果鼠标左键点击按钮，会在控制台打印 'press' 消息，注意，这里在父级上也调用了 `mousePressEvent` 方法，不然按钮按下的动作不会展现出来。
