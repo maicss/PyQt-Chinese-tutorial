@@ -129,7 +129,7 @@ exitAct.triggered.connect(QApplication.instance().quit)
 ``` python
 menubar = self.menuBar()
 fileMenu = menubar.addMenu('&File')
-fileMenu.addAction(exitAction)
+fileMenu.addAction(exitAct)
 ```
 `menuBar` 方法创建了一个菜单栏，然后使用 `addMenu` 创建一个文件菜单，使用 `addAction` 创建一个行为。
 
