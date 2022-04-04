@@ -136,7 +136,7 @@ fileMenu.addAction(exitAct)
 ## PyQt6 子菜单
 子菜单是位于菜单里的菜单。
 ``` python
-submenu.py
+# file: submenu.py
 #!/usr/bin/python
 
 """
