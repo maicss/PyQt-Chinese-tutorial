@@ -535,7 +535,7 @@ class Example(QWidget):
 
         qp = QPainter()
         qp.begin(self)
-        qp.setRenderHint(QPainter.RenderHints.Antialiasing)
+        qp.setRenderHint(QPainter.RenderHint.Antialiasing)
         self.drawBezierCurve(qp)
         qp.end()
 
