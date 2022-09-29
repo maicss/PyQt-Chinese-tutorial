@@ -176,7 +176,7 @@ class Button(QPushButton):
 
         drag.setHotSpot(e.position().toPoint() - self.rect().topLeft())
 
-        dropAction = drag.exec(Qt.DropActions.MoveAction)
+        dropAction = drag.exec(Qt.DropAction.MoveAction)
 
 
     def mousePressEvent(self, e):
@@ -216,7 +216,7 @@ class Example(QWidget):
         position = e.position()
         self.button.move(position.toPoint())
 
-        e.setDropAction(Qt.DropActions.MoveAction)
+        e.setDropAction(Qt.DropAction.MoveAction)
         e.accept()
 
 
@@ -257,7 +257,7 @@ drag.setHotSpot(e.position().toPoint() - self.rect().topLeft())
 创建 `QDrag` 对象，以提供基于 MIME 数据类型的拖拽操作。
 
 ``` python
-dropAction = drag.exec(Qt.DropActions.MoveAction)
+dropAction = drag.exec(Qt.DropAction.MoveAction)
 ```
 `drag` 对象的 `exec` 方法执行拖拽操作。
 
