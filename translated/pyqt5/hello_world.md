@@ -344,7 +344,7 @@ from PyQt5.QtCore import QCoreApplication
 qbtn = QPushButton('Quit', self)
 ```
 
-创建一个继承自`QPushButton`的按钮。第一个参数是按钮的文本，第二个参数是按钮的父级组件，这个例子中，父级组件就是我们创建的继承自`Qwidget`的`Example`类。
+创建一个继承自`QPushButton`的按钮。第一个参数是按钮的文本，第二个参数是按钮的父级组件，这个例子中，父级组件就是我们创建的继承自`QWidget`的`Example`类。
 
 ```text
 qbtn.clicked.connect(QCoreApplication.instance().quit)
