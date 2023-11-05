@@ -1,4 +1,6 @@
-# 欢迎
+---
+description: 欢迎来到 PyQt 中文教程！本教程已迁移至[https://maicss.com/pyqt/](https://maicss.com/pyqt/)
+---
 
-欢迎来到 PyQt 中文教程，本教程提供了 PyQt5 和 PyQt6 两个教程，内容几乎一样，只是根据版本不同变更了某些API，PyQt6 版本是 PyQt5 版本的升级替代者。
+# 欢迎
 
