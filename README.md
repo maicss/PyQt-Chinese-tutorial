@@ -1,7 +1,7 @@
 # 项目介绍
 翻译自 zetcode 的 PyQt 教程。
 
-GitBook 预览地址：[https://maicss.gitbook.io/pyqt-chinese-tutoral/](https://maicss.gitbook.io/pyqt-chinese-tutoral/)。
+预览地址：[https://maicss.com/pyqt/](https://maicss.com/pyqt/)。
 
 ## 前言
 
@@ -16,7 +16,7 @@ GitBook 预览地址：[https://maicss.gitbook.io/pyqt-chinese-tutoral/](https:/
 ## 更新日志：
 
 ### 2017-08
-* [原文地址](https://zetcode.com/gui/pyqt5/)
+* [原文地址](https://zetcode.com/gui/pyqt6/)
 * 菜单和工具栏 【新增】 右键菜单 子菜单 勾选菜单
 * 事件和信号 【新增】 事件对象
 * 绘图 【新增】 贝塞尔曲线
